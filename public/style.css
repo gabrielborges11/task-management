@@ -1,0 +1,150 @@
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.tarefa{
+    height:280px;
+    width:300px;
+    border:none;
+    border-radius:20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 2px 10px 1px rgb(138, 135, 135);
+
+}
+
+.btn{
+  display:flex;
+  gap:5px;
+}
+
+.criar{
+    padding: 20px;
+    border-radius:40px;
+    background-color: black;
+    color:white;
+    cursor:pointer;
+    transition:0.5s;
+    font-size:20px;
+}
+
+
+.criar:hover{
+    background:transparent;
+    color:black;
+}
+
+
+#tarefas-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  
+    grid-auto-rows: auto; 
+    gap: 7px;
+  
+}
+
+
+  .alinhar1{
+    display:flex;
+    gap:40px;
+  
+  }
+
+  form{
+    display:flex;
+    flex-direction: column;
+    width:80%;
+    gap:10px;
+  }
+
+  input[type=date]{
+    width:100px;
+  }
+  
+  input{
+    border-radius: 20px;
+    padding:10px;
+  }
+
+  input[type="radio"] {
+    transform: scale(1.5); 
+    margin: 10px; 
+  }
+
+  label{
+    font-size:20px;
+  }
+
+.btn button{
+  padding:5px;
+  border:none;
+  width:80px;
+  height:40px;
+  border-radius: 15px;
+  cursor:pointer;
+  transition:0.5s;
+}
+
+.btn button:hover{
+   background:transparent;
+   color:black;
+}
+
+  .btnEditar{
+    background-color:rgb(250, 207, 66)
+  }
+
+  .btnEditar:hover{
+  border:2px solid  rgb(250, 207, 66);
+  }
+
+  .btnExcluir{
+    background-color: rgb(255, 83, 83);
+    color:white;
+  }
+
+  .btnExcluir:hover{
+    border:2px solid rgb(255, 83, 83);
+  }
+
+  .btnConcluir{
+    background-color: rgb(90, 90, 247);
+    color:white;
+  }
+
+  .btnConcluir:hover{
+    border:2px solid rgb(90, 90, 247);
+  }
+
+  textarea{
+    height:100px;
+    border-radius: 10px;
+  }
+
+  textarea::placeholder{
+     text-align: center;
+  }
+
+  form button{
+    cursor:pointer;
+    padding:5px;
+    background: transparent;
+    border-radius:10px;
+    transition:0.5s;
+  }
+
+  form button:hover{
+    background-color: black;
+    color:white;
+  }
+
+  @media(max-width:700px){
+   #tarefas-container{
+      display:flex;
+      flex-direction: column;
+    }
+  }

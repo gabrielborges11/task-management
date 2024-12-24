@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="poup.css">
+    <title>tarefas</title>
+</head>
+<body>
+
+
+    <button  onclick="openPopup()" class="criar">criar tarefa</button>
+
+    <div id="popup" class="popup-background">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup()">Fechar</button>
+            <form action="/enviar" method="POST">
+          <input type="text" placeholder="titulo da tarefa" name="titulo" id="titulo">
+          <textarea placeholder="descrição da tarefa" name="descricao" id="descricao"></textarea>
+          <input type="date" name="prazo" id="prazo">
+          <div style="display:flex; gap:10px;">
+            <label>
+                <input type="radio" name="importancia" value="normal" checked>normal
+            </label>
+            <label>
+              <input type="radio" name="importancia" value="importante" >importante
+            </label>
+          </div>
+          <div style="width:100%; display:flex; align-items: center;gap:10px;">
+        <button style="width:50%">cancelar</button>
+        <button  style="width:50%" type="submit">criar</button>
+        </div>
+        </form>
+</div>
+</div>
+
+<div id="popup2" class="popup-background">
+  <div class="popup-content">
+    <button class="close-btn" onclick="closePopup2()">Fechar</button>
+    <form action="/editar" method="POST">
+      <input type="hidden" name="id_tarefa" id="id_tarefa2">
+      <input type="text" name="titulo" id="titulo2" placeholder="titulo da tarefa">
+      <textarea type="text" name="descricao" id="descricao2"></textarea>
+      <input type="date" name="prazo" id="prazo2">
+
+      <div style="display:flex; gap:10px;">
+      <label>
+        <input type="radio" name="importancia" value="normal" checked>normal
+      </label>
+      <label>
+        <input type="radio" name="importancia" value="importante">importante
+      </label>
+    </div>
+    <div style="width:100%; display:flex; align-items: center;gap:10px;">
+      <button style="width:50%" type="button" onclick="closePopup2()">Cancelar</button>
+      <button style="width:50%" type="submit">Salvar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+ <h3>tarefas:</h3>
+
+    <div id="tarefas-container" class="tarefas-container">
+      <div class="row">
+        <!-- As tarefas serão carregadas aqui dinamicamente -->
+      </div>
+      </div>
+      
+
+<script src="poup.js"></script>
+<script src="tarefas.js"></script>
+
+  
+</body>
+</html>
