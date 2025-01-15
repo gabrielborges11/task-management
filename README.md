@@ -13,7 +13,7 @@
 <br>
 <ul>
   <li>Instale as dependências: npm install</li>
-  <li>ultilizar Banco de Dados Mysql & programa workbench mysql></li>
+  <li>ultilizar Banco de Dados Mysql & programa workbench mysql</li>
   <li>Configure as variáveis de ambiente criando um arquivo .env e definindo as variáveis necessárias</li>
   <li>Inicie o servidor: node app</li>
 </ul>
